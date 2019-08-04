@@ -27,10 +27,10 @@ TypeWriter.prototype.type = function() {
   this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
   // Initial Type Speed
-  let typeSpeed = 300;
+  let typeSpeed = 150;
 
   if (this.isDeleting) {
-    typeSpeed /= 2;
+    typeSpeed = 100;
   }
 
   // If word is complete
@@ -44,7 +44,7 @@ TypeWriter.prototype.type = function() {
     // Move to next word
     this.wordIndex++;
     // Pause before start typing
-    typeSpeed = 500;
+    typeSpeed = 400;
   }
 
   setTimeout(() => this.type(), typeSpeed);
